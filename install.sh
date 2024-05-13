@@ -54,6 +54,11 @@ fi
 # Uncomment if you are using evilginx as the dns resolver 
 #echo "Setting permissions to allow evilginx to bind to privileged ports..."
 #sudo setcap CAP_NET_BIND_SERVICE=+eip evilginx
+#sudo setcap CAP_NET_BIND_SERVICE=+eip /home/admin/evilginx/evilginx/evilginx
+
+# Seup users and permissions
+# sudo adduser --disabled-password --comment "" evilginx
+# sudo usermod -aG sudo evilginx
 
 echo "Cloning evilginx repository..."
 if [ ! -d "/home/admin/src-evilginx" ]; then
